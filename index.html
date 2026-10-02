@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy Policy — Barcode Match Detector</title>
+
+    <meta name="description"
+          content="Privacy Policy for the Barcode Match Detector mobile application.">
+    <meta name="robots" content="index, follow">
+
+    <style>
+        :root {
+            --primary: #06b6d4;
+            --primary-dark: #0891b2;
+            --navy: #07111f;
+            --navy-light: #0d1b2d;
+            --text: #172033;
+            --text-light: #667085;
+            --background: #f3f7fa;
+            --card: #ffffff;
+            --border: #e2e8f0;
+            --accent-bg: #ecfeff;
+            --success-bg: #ecfdf5;
+            --success: #047857;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.75;
+        }
+
+        /* HEADER */
+
+        .header {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(6, 182, 212, 0.20),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 85% 80%,
+                    rgba(14, 165, 233, 0.16),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #050b14 0%,
+                    #0a1727 55%,
+                    #0d2235 100%
+                );
+            color: white;
+            padding: 64px 20px 105px;
+            text-align: center;
+        }
+
+        /*
+         * Decorative barcode lines
+         */
+        .barcode-decoration {
+            position: absolute;
+            inset: 0;
+            opacity: 0.06;
+            pointer-events: none;
+            background-image:
+                repeating-linear-gradient(
+                    90deg,
+                    white 0,
+                    white 2px,
+                    transparent 2px,
+                    transparent 7px,
+                    white 7px,
+                    white 8px,
+                    transparent 8px,
+                    transparent 14px
+                );
+            transform: skewX(-12deg) scale(1.15);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .app-icon {
+            width: 82px;
+            height: 82px;
+            margin: 0 auto 24px;
+            border-radius: 22px;
+            background: rgba(6, 182, 212, 0.12);
+            border: 1px solid rgba(103, 232, 249, 0.28);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow:
+                0 0 0 8px rgba(6, 182, 212, 0.04),
+                0 12px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        /*
+         * Barcode icon made with CSS
+         */
+        .barcode-icon {
+            width: 42px;
+            height: 44px;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            gap: 3px;
+        }
+
+        .barcode-icon span {
+            display: block;
+            background: #67e8f9;
+            border-radius: 1px;
+        }
+
+        .barcode-icon span:nth-child(1) { width: 3px; }
+        .barcode-icon span:nth-child(2) { width: 2px; }
+        .barcode-icon span:nth-child(3) { width: 5px; }
+        .barcode-icon span:nth-child(4) { width: 2px; }
+        .barcode-icon span:nth-child(5) { width: 4px; }
+        .barcode-icon span:nth-child(6) { width: 2px; }
+        .barcode-icon span:nth-child(7) { width: 5px; }
+        .barcode-icon span:nth-child(8) { width: 3px; }
+        .barcode-icon span:nth-child(9) { width: 2px; }
+        .barcode-icon span:nth-child(10) { width: 5px; }
+
+        .header h1 {
+            font-size: clamp(31px, 6vw, 48px);
+            line-height: 1.15;
+            font-weight: 750;
+            letter-spacing: -1px;
+            margin-bottom: 14px;
+        }
+
+        .subtitle {
+            max-width: 650px;
+            margin: 0 auto 22px;
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 16px;
+        }
+
+        .updated {
+            display: inline-block;
+            font-size: 13px;
+            color: #a5f3fc;
+            background: rgba(6, 182, 212, 0.10);
+            border: 1px solid rgba(103, 232, 249, 0.20);
+            padding: 7px 14px;
+            border-radius: 999px;
+        }
+
+        /* CONTENT */
+
+        .container {
+            max-width: 920px;
+            margin: -48px auto 60px;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .content {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: 46px;
+            box-shadow:
+                0 20px 55px rgba(15, 23, 42, 0.09);
+        }
+
+        .intro {
+            font-size: 17px;
+            color: #475467;
+            padding: 21px 23px;
+            margin-bottom: 42px;
+            background: var(--accent-bg);
+            border: 1px solid #cffafe;
+            border-left: 4px solid var(--primary);
+            border-radius: 0 14px 14px 0;
+        }
+
+        section {
+            margin-bottom: 42px;
+            scroll-margin-top: 20px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            font-size: 22px;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+
+        .number {
+            flex: 0 0 auto;
+            width: 36px;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #ecfeff;
+            color: var(--primary-dark);
+            border: 1px solid #cffafe;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 750;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #475467;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            margin: 15px 0 19px;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        li {
+            position: relative;
+            padding: 8px 0 8px 29px;
+            color: #475467;
+        }
+
+        li::before {
+            content: "";
+            position: absolute;
+            left: 2px;
+            top: 14px;
+            width: 7px;
+            height: 7px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px #ecfeff;
+        }
+
+        .highlight {
+            background: var(--success-bg);
+            border: 1px solid #a7f3d0;
+            color: var(--success);
+            padding: 19px 21px;
+            border-radius: 14px;
+            margin-top: 20px;
+        }
+
+        .highlight p {
+            color: var(--success);
+            margin: 0;
+        }
+
+        .contact {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 21px;
+            margin-top: 20px;
+        }
+
+        .contact p {
+            margin-bottom: 8px;
+        }
+
+        .contact p:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 650;
+        }
+
+        a:hover {
+            color: #0e7490;
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            text-align: center;
+            color: #7b8797;
+            font-size: 13px;
+            padding: 0 20px 35px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 650px) {
+            .header {
+                padding: 46px 18px 82px;
+            }
+
+            .container {
+                padding: 0 12px;
+                margin-top: -35px;
+            }
+
+            .content {
+                padding: 29px 22px;
+                border-radius: 17px;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 15px;
+            }
+
+            h2 {
+                font-size: 19px;
+            }
+
+            .intro {
+                font-size: 15px;
+                padding: 17px;
+            }
+
+            .app-icon {
+                width: 74px;
+                height: 74px;
+            }
+        }
+
+        /* DARK MODE */
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #e6edf5;
+                --text-light: #aab6c5;
+                --background: #07111f;
+                --card: #0d1b2d;
+                --border: #1d3046;
+                --accent-bg: #082b35;
+            }
+
+            body {
+                background: var(--background);
+            }
+
+            .content {
+                box-shadow:
+                    0 20px 55px rgba(0, 0, 0, 0.30);
+            }
+
+            .intro {
+                color: #b9c7d6;
+                border-color: #164e63;
+            }
+
+            h2 {
+                color: #edf6ff;
+            }
+
+            p,
+            li {
+                color: #aebccc;
+            }
+
+            .number {
+                background: #082b35;
+                border-color: #155e75;
+                color: #67e8f9;
+            }
+
+            .contact {
+                background: #091522;
+                border-color: #1d3046;
+            }
+
+            .footer {
+                color: #718096;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="barcode-decoration"></div>
+
+    <div class="header-content">
+
+        <div class="app-icon" aria-hidden="true">
+            <div class="barcode-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <h1>Privacy Policy</h1>
+
+        <p class="subtitle">
+            How Barcode Match Detector handles information,
+            barcode scans, and third-party services.
+        </p>
+
+        <span class="updated">
+            Last updated: October 2, 2026
+        </span>
+
+    </div>
+</header>
+
+
+<main class="container">
+
+    <article class="content">
+
+        <div class="intro">
+            This Privacy Policy explains how
+            <strong>Barcode Match Detector</strong>
+            handles information when you use the application.
+            We are committed to keeping the app simple, transparent,
+            and respectful of your privacy.
+        </div>
+
+
+        <section>
+
+            <h2>
+                <span class="number">1</span>
+                General Information
+            </h2>
+
+            <p>
+                <strong>Barcode Match Detector</strong> is a mobile
+                application designed to scan, compare, and detect
+                whether barcodes match.
+            </p>
+
+            <p>
+                The app is designed so that its primary barcode
+                matching functionality can be performed directly
+                on your device.
+            </p>
+
+            <div class="highlight">
+                <p>
+                    <strong>Privacy first:</strong>
+                    We do not intentionally collect, sell, or store
+                    your personal information on our own servers.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>
+                <span class="number">2</span>
+                Information We Collect
+            </h2>
+
+            <p>
+                Barcode Match Detector itself does not intentionally
+                collect the following personal information:
+            </p>
+
+            <ul>
+                <li>Your name or surname</li>
+                <li>Your phone number</li>
+                <li>Your email address</li>
+                <li>Your physical address or GPS location</li>
+                <li>Your contacts</li>
+                <li>Your photos or videos</li>
+                <li>Your personal account information</li>
+                <li>Your payment information</li>
+                <li>Your barcode scan history on our servers</li>
+                <li>Other personally identifiable information</li>
+            </ul>
+
+            <p>
+                Barcode values entered or scanned in the app are
+                processed for the purpose of comparing and matching
+                barcodes. This information is not intentionally
+                transmitted to our own servers.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h2>
+                <span class="number">3</span>
+                Camera Permission
+            </h2>
+
+            <p>
+                Barcode Match Detector may request access to your
+                device camera so that you can scan barcodes.
+            </p>
+
+            <p>
+                Camera access is used only for barcode scanning.
+                The app does not intentionally upload your camera
+                images or videos to our servers.
+            </p>
+
+            <p>
+                You can manage or revoke camera permission at any
+                time through your device settings. If camera access
+                is disabled, barcode scanning using the camera may
+                not be available.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h2>
+                <span class="number">4</span>
+                Barcode Information
+            </h2>
+
+            <p>
+                When you scan or enter a barcode, the barcode data
+                may be temporarily processed by the application
+                to determine whether two barcode values match.
+            </p>
+
+            <p>
+                Barcode information is used only to provide the
+                functionality requested by you. We do not use your
+                barcode values to create a personal profile.
+            </p>
+
+            <p>
+                Unless specifically stated otherwise in a future
+                version of the application, barcode data is not
+                stored on our servers.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h2>
+                <span class="number">5</span>
+                Advertising
+            </h2>
+
+            <p>
+                The application may use Google AdMob to display
+                advertisements.
+            </p>
+
+            <p>
+                AdMob may automatically process certain information
+                related to your device and app usage for purposes
+                such as displaying advertisements, measuring
+                advertising performance, preventing fraud, and
+                providing relevant advertising.
+            </p>
+
+            <p>
+                This information may be processed by Google as a
+                third-party service provider and is subject to
+                Google's own privacy policies.
+            </p>
+
+            <p>
+                For more information about how Google handles data,
+                please visit the
+                <a href="https://policies.google.com/privacy"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Google Privacy Policy
+                </a>.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h2>
+                <span class="number">6</span>
+                Third-Party Services
+            </h2>
+
+            <p>
+                The application may use the following third-party
+                service:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Google AdMob</strong> — advertising
+                    and advertising measurement services.
+                </li>
+            </ul>
+
+            <p>
+                Third-party services may collect or process certain
+                information according to their own privacy policies.
+                We do not independently control the information
+                processed by these third-party services.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h2>
+                <span class="number">7</span>
+                Internet Connection
+            </h2>
+
+            <p>
+                The core barcode scanning and matching functionality
+                is designed to work without requiring an internet
+                connection.
+            </p>
+
+            <p>
+                However, an internet connection may be required
+                for third-party services such as advertising.
+            </p>
+
+            <p>
+                If an internet connection is unavailable,
+                advertisements or other online services may not
+                function, while the core offline functionality
+                may continue to work.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h2>
+                <span class="number">8</span>
+                Data Storage
+            </h2>
+
+            <p>
+                We do not operate a server that intentionally stores
+                your personal information or barcode scan data.
+            </p>
+
+            <p>
+                Information needed for barcode matching is processed
+                locally within the application whenever possible.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h2>
+                <span class="number">9</span>
+                Children's Privacy
+            </h2>
+
+            <p>
+                Barcode Match Detector does not intentionally collect
+                personal information from children.
+            </p>
+
+            <p>
+                If third-party services such as Google AdMob impose
+                additional requirements concerning children or
+                users under the applicable age, those requirements
+                and applicable laws will apply.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h2>
+                <span class="number">10</span>
+                Changes to This Privacy Policy
+            </h2>
+
+            <p>
+                We may update this Privacy Policy from time to time
+                to reflect changes to the application, third-party
+                services, or applicable requirements.
+            </p>
+
+            <p>
+                Any updates will be published on this page with a
+                new "Last updated" date.
+            </p>
+
+            <p>
+                We encourage you to review this page periodically
+                to stay informed about how the application handles
+                information.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h2>
+                <span class="number">11</span>
+                Contact
+            </h2>
+
+            <p>
+                If you have questions or concerns about this Privacy
+                Policy or the privacy practices of Barcode Match
+                Detector, you can contact the app developer.
+            </p>
+
+            <div class="contact">
+                <p>
+                    <strong>App:</strong>
+                    Barcode Match Detector
+                </p>
+
+                <p>
+                    <strong>Privacy:</strong>
+                    For privacy-related questions, please use the
+                    contact information provided on the application's
+                    official store listing.
+                </p>
+            </div>
+
+        </section>
+
+
+        <div class="highlight">
+
+            <p>
+                <strong>Barcode Match Detector</strong>
+                respects your privacy. The core barcode matching
+                functionality is designed to process barcode data
+                locally on your device rather than requiring you to
+                create an account or submit personal information.
+            </p>
+
+        </div>
+
+    </article>
+
+</main>
+
+
+<footer class="footer">
+    © 2026 Barcode Match Detector. All rights reserved.
+</footer>
+
+</body>
+</html>
